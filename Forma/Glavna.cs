@@ -33,5 +33,35 @@ namespace EDnevnik
             string user = Program.user_ime + " " + Program.user_prezime;
             lbl_user.Text = user;
         }
+
+        private void smeroviToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sifarnik frm_sifarnik = new Sifarnik("smer");
+            frm_sifarnik.Show();
+        }
+
+        private void skolskeGodineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sifarnik frm_sifarnik = new Sifarnik("skolska_godina");
+            frm_sifarnik.Show();
+        }
+
+        private void predmetiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sifarnik frm_sifarnik = new Sifarnik("predmet");
+            frm_sifarnik.Show();
+        }
+
+        private void osobeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Sifarnik frm_sifarnik = new Sifarnik("osoba");
+            frm_sifarnik.Show();
+        }
+
+        private void raspodelaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Raspodela frm_raspodela = new Raspodela();
+            frm_raspodela.Show();
+        }
     }
 }

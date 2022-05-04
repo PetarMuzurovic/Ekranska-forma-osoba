@@ -22,3 +22,17 @@ C:\Users\Peky\Desktop\EDnevnik-main\obj\Debug\EDnevnik.csproj.GenerateResource.c
 C:\Users\Peky\Desktop\EDnevnik-main\obj\Debug\EDnevnik.csproj.CoreCompileInputs.cache
 C:\Users\Peky\Desktop\EDnevnik-main\obj\Debug\EDnevnik.exe
 C:\Users\Peky\Desktop\EDnevnik-main\obj\Debug\EDnevnik.pdb
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\bin\Debug\EDnevnik.exe.config
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\bin\Debug\EDnevnik.exe
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\bin\Debug\EDnevnik.pdb
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.csprojAssemblyReference.cache
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.Glavna.resources
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.Login.resources
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.Osoba.resources
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.Properties.Resources.resources
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.Raspodela.resources
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.Sifarnik.resources
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.csproj.GenerateResource.cache
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.csproj.CoreCompileInputs.cache
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.exe
+C:\Users\Peky\Desktop\EKO forma\Ekranska-forma-osoba\Forma\obj\Debug\EDnevnik.pdb
