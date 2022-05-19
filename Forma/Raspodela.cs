@@ -19,54 +19,56 @@ namespace EDnevnik
         {
             InitializeComponent();
         }
-        private void Load_data()
+
+        private void Load_Data()
         {
             SqlConnection veza = Konekcija.Connect();
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM raspodela", veza);
             raspodela = new DataTable();
             adapter.Fill(raspodela);
         }
-        private void Raspodela_Load(object sender, EventArgs e)
-        {
-            Load_data();
-            ComboFill();
-        }
+
         private void ComboFill()
         {
             SqlConnection veza = Konekcija.Connect();
             SqlDataAdapter adapter;
             DataTable dt_godina, dt_nastavnik, dt_predmet, dt_odeljenje;
+
             adapter = new SqlDataAdapter("SELECT * FROM skolska_godina", veza);
             dt_godina = new DataTable();
             adapter.Fill(dt_godina);
 
-            dt_nastavnik = new DataTable();
             adapter = new SqlDataAdapter("SELECT id, ime + prezime as naziv FROM osoba WHERE uloga = 2", veza);
+            dt_nastavnik = new DataTable();
             adapter.Fill(dt_nastavnik);
 
-            dt_predmet = new DataTable();
             adapter = new SqlDataAdapter("SELECT id, naziv FROM predmet", veza);
+            dt_predmet = new DataTable();
             adapter.Fill(dt_predmet);
 
-            dt_odeljenje = new DataTable();
             adapter = new SqlDataAdapter("SELECT id, STR(razred) + '-' + indeks as naziv FROM odeljenje", veza);
+            dt_odeljenje = new DataTable();
             adapter.Fill(dt_odeljenje);
 
-            cmb_godina.DataSource = dt_godina;
             cmb_godina.ValueMember = "id";
             cmb_godina.DisplayMember = "naziv";
+            cmb_godina.DataSource = dt_godina;
+            cmb_godina.SelectedValue = raspodela.Rows[broj_sloga]["godina_id"];
 
-            cmb_nastavnik.DataSource = dt_nastavnik;
             cmb_nastavnik.ValueMember = "id";
             cmb_nastavnik.DisplayMember = "naziv";
+            cmb_nastavnik.DataSource = dt_nastavnik;
+            cmb_nastavnik.SelectedValue = raspodela.Rows[broj_sloga]["nastavnik_id"];
 
-            cmb_predmet.DataSource = dt_predmet;
             cmb_predmet.ValueMember = "id";
             cmb_predmet.DisplayMember = "naziv";
+            cmb_predmet.DataSource = dt_predmet;
+            cmb_predmet.SelectedValue = raspodela.Rows[broj_sloga]["predmet_id"];
 
-            cmb_odeljenje.DataSource = dt_odeljenje;
             cmb_odeljenje.ValueMember = "id";
             cmb_odeljenje.DisplayMember = "naziv";
+            cmb_odeljenje.DataSource = dt_odeljenje;
+            cmb_odeljenje.SelectedValue = raspodela.Rows[broj_sloga]["odeljenje_id"];
 
             txt_id.Text = raspodela.Rows[broj_sloga]["id"].ToString();
 
@@ -84,6 +86,7 @@ namespace EDnevnik
                 cmb_predmet.SelectedValue = raspodela.Rows[broj_sloga]["predmet_id"];
                 cmb_odeljenje.SelectedValue = raspodela.Rows[broj_sloga]["odeljenje_id"];
             }
+
             if (broj_sloga == 0)
             {
                 btn_first.Enabled = false;
@@ -94,6 +97,7 @@ namespace EDnevnik
                 btn_first.Enabled = true;
                 btn_prev.Enabled = true;
             }
+
             if (broj_sloga == raspodela.Rows.Count - 1)
             {
                 btn_last.Enabled = false;
@@ -104,6 +108,12 @@ namespace EDnevnik
                 btn_last.Enabled = true;
                 btn_next.Enabled = true;
             }
+        }
+
+        private void Raspodela_Load(object sender, EventArgs e)
+        {
+            Load_Data();
+            ComboFill();
         }
 
         private void btn_first_Click(object sender, EventArgs e)
@@ -133,12 +143,12 @@ namespace EDnevnik
         private void btn_insert_Click(object sender, EventArgs e)
         {
             // INSERT INTO raspodela (godina_id, nastavnik_id, predmet_id, odeljenje_id)
-            // VALUES(7, 2, 2, 1)'
+            // VALUES(7, 2, 2, 1)
             StringBuilder Naredba = new StringBuilder("INSERT INTO raspodela (godina_id, nastavnik_id, predmet_id, odeljenje_id) VALUES('");
             Naredba.Append(cmb_godina.SelectedValue + "', '");
             Naredba.Append(cmb_nastavnik.SelectedValue + "', '");
             Naredba.Append(cmb_predmet.SelectedValue + "', '");
-            Naredba.Append(cmb_odeljenje.SelectedValue + "', '");
+            Naredba.Append(cmb_odeljenje.SelectedValue + "')");
             SqlConnection veza = Konekcija.Connect();
             SqlCommand Komanda = new SqlCommand(Naredba.ToString(), veza);
             try
@@ -151,22 +161,18 @@ namespace EDnevnik
             {
                 MessageBox.Show(Greska.Message);
             }
-            Load_data();
+            Load_Data();
             broj_sloga = raspodela.Rows.Count - 1;
             ComboFill();
-
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            // UPDATE osoba SET ime = 'Marko', prezime = 'Peric', adresa = 'Studenac 8',
-            // jmbg = '123456', email = 'markop@yahoo.com', pass = '1222', 'uloga = '1'
-            // WHERE id = 3
             StringBuilder Naredba = new StringBuilder("UPDATE raspodela SET ");
             Naredba.Append("godina_id = '" + cmb_godina.SelectedValue + "', ");
             Naredba.Append("nastavnik_id = '" + cmb_nastavnik.SelectedValue + "', ");
             Naredba.Append("predmet_id = '" + cmb_predmet.SelectedValue + "', ");
-            Naredba.Append("odeljenje_id = '" + cmb_odeljenje.SelectedValue + "', ");
+            Naredba.Append("odeljenje_id = '" + cmb_odeljenje.SelectedValue + "'");
             Naredba.Append("WHERE id = " + txt_id.Text);
             SqlConnection veza = Konekcija.Connect();
             SqlCommand Komanda = new SqlCommand(Naredba.ToString(), veza);
@@ -180,7 +186,7 @@ namespace EDnevnik
             {
                 MessageBox.Show(Greska.Message);
             }
-            Load_data();
+            Load_Data();
             ComboFill();
         }
 
@@ -203,11 +209,12 @@ namespace EDnevnik
             }
             if (brisano)
             {
-                Load_data();
+                Load_Data();
                 if (broj_sloga > 0)
                     broj_sloga--;
-               ComboFill();
+                ComboFill();
             }
         }
+
     }
 }

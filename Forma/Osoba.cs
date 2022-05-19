@@ -54,6 +54,7 @@ namespace EDnevnik
                 txt_uloga.Text = tabela.Rows[broj_sloga]["uloga"].ToString();
                 btn_delete.Enabled = true;
             }
+
             if (broj_sloga == 0)
             {
                 btn_first.Enabled = false;
@@ -64,6 +65,7 @@ namespace EDnevnik
                 btn_first.Enabled = true;
                 btn_prev.Enabled = true;
             }
+
             if (broj_sloga == tabela.Rows.Count - 1)
             {
                 btn_last.Enabled = false;
@@ -110,7 +112,7 @@ namespace EDnevnik
         {
             // INSERT INTO osoba (ime, prezime, adresa, jmbg, email, pass, uloga)
             // VALUES
-            // ('Marko', 'Lazic', 'Savska 10', '123123123', 'markol@gmail.com', '1233', '1')'
+            // ('Marko', 'Lazic', 'Savska 10', '123123123', 'markol@gmail.com', '1233', '1')
             StringBuilder Naredba = new StringBuilder("INSERT INTO osoba (ime, prezime, adresa, jmbg, email, pass, uloga) VALUES('");
             Naredba.Append(txt_ime.Text + "', '");
             Naredba.Append(txt_prezime.Text + "', '");
@@ -168,7 +170,8 @@ namespace EDnevnik
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            string Naredba = "DELETE FROM osoba WHERE id = " + txt_id.Text; SqlConnection veza = Konekcija.Connect();
+            string Naredba = "DELETE FROM osoba WHERE id = " + txt_id.Text;
+            SqlConnection veza = Konekcija.Connect();
             SqlCommand Komanda = new SqlCommand(Naredba, veza);
             Boolean brisano = false;
             try

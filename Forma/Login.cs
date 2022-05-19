@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Diagnostics;
 
 namespace EDnevnik
 {
@@ -36,11 +35,9 @@ namespace EDnevnik
                     SqlDataAdapter adapter = new SqlDataAdapter(komanda);
                     DataTable tabela = new DataTable();
                     adapter.Fill(tabela);
-                    //MessageBox.Show(tabela.Rows[0]["email"].ToString());
                     int brojac = tabela.Rows.Count;
-                    if (brojac >= 1)
+                    if (brojac == 1)
                     {
-                        //MessageBox.Show(tabela.Rows[0]["pass"].ToString());
                         if (String.Compare(tabela.Rows[0]["pass"].ToString(), txt_pass.Text) == 0)
                         {
                             MessageBox.Show("Login Successful!");
@@ -48,8 +45,10 @@ namespace EDnevnik
                             Program.user_prezime = tabela.Rows[0]["prezime"].ToString();
                             Program.user_uloga = (int)tabela.Rows[0]["uloga"];
                             this.Hide();
-                            Glavna frm_Glavna = new Glavna();
-                            frm_Glavna.Show();
+                            //Glavna frm_Glavna = new Glavna();
+                            //frm_Glavna.Show();
+                            Glavna2 frm_Glavna2 = new Glavna2();
+                            frm_Glavna2.Show();
                         }
                         else
                         {

@@ -57,56 +57,56 @@ namespace EDnevnik
             // txt_id
             // 
             this.txt_id.Enabled = false;
-            this.txt_id.Location = new System.Drawing.Point(143, 6);
+            this.txt_id.Location = new System.Drawing.Point(73, 6);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(192, 20);
             this.txt_id.TabIndex = 0;
             // 
             // txt_ime
             // 
-            this.txt_ime.Location = new System.Drawing.Point(143, 32);
+            this.txt_ime.Location = new System.Drawing.Point(73, 32);
             this.txt_ime.Name = "txt_ime";
             this.txt_ime.Size = new System.Drawing.Size(192, 20);
             this.txt_ime.TabIndex = 1;
             // 
             // txt_prezime
             // 
-            this.txt_prezime.Location = new System.Drawing.Point(143, 58);
+            this.txt_prezime.Location = new System.Drawing.Point(73, 58);
             this.txt_prezime.Name = "txt_prezime";
             this.txt_prezime.Size = new System.Drawing.Size(192, 20);
             this.txt_prezime.TabIndex = 2;
             // 
             // txt_adresa
             // 
-            this.txt_adresa.Location = new System.Drawing.Point(143, 84);
+            this.txt_adresa.Location = new System.Drawing.Point(73, 84);
             this.txt_adresa.Name = "txt_adresa";
             this.txt_adresa.Size = new System.Drawing.Size(192, 20);
             this.txt_adresa.TabIndex = 3;
             // 
             // txt_jmbg
             // 
-            this.txt_jmbg.Location = new System.Drawing.Point(143, 110);
+            this.txt_jmbg.Location = new System.Drawing.Point(73, 110);
             this.txt_jmbg.Name = "txt_jmbg";
             this.txt_jmbg.Size = new System.Drawing.Size(192, 20);
             this.txt_jmbg.TabIndex = 4;
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(143, 137);
+            this.txt_email.Location = new System.Drawing.Point(73, 137);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(192, 20);
             this.txt_email.TabIndex = 5;
             // 
             // txt_pass
             // 
-            this.txt_pass.Location = new System.Drawing.Point(143, 164);
+            this.txt_pass.Location = new System.Drawing.Point(73, 164);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(192, 20);
             this.txt_pass.TabIndex = 6;
             // 
             // txt_uloga
             // 
-            this.txt_uloga.Location = new System.Drawing.Point(143, 191);
+            this.txt_uloga.Location = new System.Drawing.Point(73, 191);
             this.txt_uloga.Name = "txt_uloga";
             this.txt_uloga.Size = new System.Drawing.Size(192, 20);
             this.txt_uloga.TabIndex = 7;
@@ -114,7 +114,7 @@ namespace EDnevnik
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(82, 9);
+            this.lbl_id.Location = new System.Drawing.Point(12, 9);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(18, 13);
             this.lbl_id.TabIndex = 8;
@@ -123,7 +123,7 @@ namespace EDnevnik
             // lbl_ime
             // 
             this.lbl_ime.AutoSize = true;
-            this.lbl_ime.Location = new System.Drawing.Point(82, 35);
+            this.lbl_ime.Location = new System.Drawing.Point(12, 35);
             this.lbl_ime.Name = "lbl_ime";
             this.lbl_ime.Size = new System.Drawing.Size(24, 13);
             this.lbl_ime.TabIndex = 9;
@@ -132,7 +132,7 @@ namespace EDnevnik
             // lbl_prezime
             // 
             this.lbl_prezime.AutoSize = true;
-            this.lbl_prezime.Location = new System.Drawing.Point(82, 61);
+            this.lbl_prezime.Location = new System.Drawing.Point(12, 61);
             this.lbl_prezime.Name = "lbl_prezime";
             this.lbl_prezime.Size = new System.Drawing.Size(44, 13);
             this.lbl_prezime.TabIndex = 10;
@@ -141,7 +141,7 @@ namespace EDnevnik
             // lbl_adresa
             // 
             this.lbl_adresa.AutoSize = true;
-            this.lbl_adresa.Location = new System.Drawing.Point(82, 87);
+            this.lbl_adresa.Location = new System.Drawing.Point(12, 87);
             this.lbl_adresa.Name = "lbl_adresa";
             this.lbl_adresa.Size = new System.Drawing.Size(40, 13);
             this.lbl_adresa.TabIndex = 11;
@@ -150,7 +150,7 @@ namespace EDnevnik
             // lbl_jmbg
             // 
             this.lbl_jmbg.AutoSize = true;
-            this.lbl_jmbg.Location = new System.Drawing.Point(82, 113);
+            this.lbl_jmbg.Location = new System.Drawing.Point(12, 113);
             this.lbl_jmbg.Name = "lbl_jmbg";
             this.lbl_jmbg.Size = new System.Drawing.Size(36, 13);
             this.lbl_jmbg.TabIndex = 12;
@@ -159,7 +159,7 @@ namespace EDnevnik
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
-            this.lbl_email.Location = new System.Drawing.Point(82, 140);
+            this.lbl_email.Location = new System.Drawing.Point(12, 140);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(35, 13);
             this.lbl_email.TabIndex = 13;
@@ -168,7 +168,7 @@ namespace EDnevnik
             // lbl_pass
             // 
             this.lbl_pass.AutoSize = true;
-            this.lbl_pass.Location = new System.Drawing.Point(82, 167);
+            this.lbl_pass.Location = new System.Drawing.Point(12, 167);
             this.lbl_pass.Name = "lbl_pass";
             this.lbl_pass.Size = new System.Drawing.Size(44, 13);
             this.lbl_pass.TabIndex = 14;
@@ -177,7 +177,7 @@ namespace EDnevnik
             // lbl_uloga
             // 
             this.lbl_uloga.AutoSize = true;
-            this.lbl_uloga.Location = new System.Drawing.Point(82, 194);
+            this.lbl_uloga.Location = new System.Drawing.Point(12, 194);
             this.lbl_uloga.Name = "lbl_uloga";
             this.lbl_uloga.Size = new System.Drawing.Size(35, 13);
             this.lbl_uloga.TabIndex = 15;
@@ -205,7 +205,7 @@ namespace EDnevnik
             // 
             // btn_insert
             // 
-            this.btn_insert.Location = new System.Drawing.Point(143, 229);
+            this.btn_insert.Location = new System.Drawing.Point(47, 258);
             this.btn_insert.Name = "btn_insert";
             this.btn_insert.Size = new System.Drawing.Size(58, 23);
             this.btn_insert.TabIndex = 18;
@@ -215,7 +215,7 @@ namespace EDnevnik
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(207, 229);
+            this.btn_update.Location = new System.Drawing.Point(111, 258);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(58, 23);
             this.btn_update.TabIndex = 19;
@@ -225,7 +225,7 @@ namespace EDnevnik
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(271, 229);
+            this.btn_delete.Location = new System.Drawing.Point(175, 258);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(58, 23);
             this.btn_delete.TabIndex = 20;
@@ -235,7 +235,7 @@ namespace EDnevnik
             // 
             // btn_next
             // 
-            this.btn_next.Location = new System.Drawing.Point(337, 229);
+            this.btn_next.Location = new System.Drawing.Point(143, 229);
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(58, 23);
             this.btn_next.TabIndex = 21;
@@ -245,7 +245,7 @@ namespace EDnevnik
             // 
             // btn_last
             // 
-            this.btn_last.Location = new System.Drawing.Point(401, 229);
+            this.btn_last.Location = new System.Drawing.Point(207, 229);
             this.btn_last.Name = "btn_last";
             this.btn_last.Size = new System.Drawing.Size(58, 23);
             this.btn_last.TabIndex = 22;
@@ -257,7 +257,7 @@ namespace EDnevnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 295);
+            this.ClientSize = new System.Drawing.Size(281, 295);
             this.Controls.Add(this.btn_last);
             this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_delete);

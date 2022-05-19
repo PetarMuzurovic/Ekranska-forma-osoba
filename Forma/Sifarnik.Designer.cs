@@ -1,4 +1,5 @@
-﻿namespace EDnevnik
+﻿
+namespace EDnevnik
 {
     partial class Sifarnik
     {
@@ -38,12 +39,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(757, 262);
+            this.dataGridView1.Size = new System.Drawing.Size(866, 271);
             this.dataGridView1.TabIndex = 0;
             // 
             // btn_ok
             // 
-            this.btn_ok.Location = new System.Drawing.Point(358, 315);
+            this.btn_ok.Location = new System.Drawing.Point(12, 289);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(75, 23);
             this.btn_ok.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 378);
+            this.ClientSize = new System.Drawing.Size(890, 318);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Sifarnik";
